@@ -1,0 +1,26 @@
+name: HealthTab
+version: '1.0.0'
+main: com.healthtab.plugin.HealthTabPlugin
+author: you
+description: Tab-list health display + LuckPerms prefix/suffix + floating nametag titles, for 1.8-1.8.9 servers.
+softdepend: [LuckPerms]
+
+commands:
+  healthtab:
+    description: Manage HealthTab's health display and settings.
+    usage: /<command> <toggle|world|format|reload|status>
+    permission: healthtab.admin
+    permission-message: You don't have permission to do that.
+  nametag:
+    description: Set, view, or remove a player's floating nametag title.
+    usage: /<command> <player> [title text|remove]
+    permission: healthtab.nametag
+    permission-message: You don't have permission to do that.
+
+permissions:
+  healthtab.admin:
+    description: Allows use of /healthtab (toggling health display, formats, reload).
+    default: op
+  healthtab.nametag:
+    description: Allows use of /nametag to set floating titles.
+    default: op

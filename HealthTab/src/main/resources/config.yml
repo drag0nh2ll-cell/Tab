@@ -1,0 +1,29 @@
+# HealthTab configuration
+#
+# On a BungeeCord/Velocity network each backend server has its own copy of this
+# file (its own plugins/HealthTab/config.yml), which is what makes the
+# per-server toggle in /healthtab work: it only ever affects the server it's
+# saved on.
+
+# A friendly name for THIS server/instance. Purely cosmetic, shown in
+# /healthtab status.
+server-name: "this-server"
+
+health-display:
+  # Master switch for this server. /healthtab toggle flips this at runtime.
+  enabled-globally: true
+
+  # Worlds where health is hidden even if enabled-globally is true.
+  # /healthtab world <world> off|on edits this list at runtime.
+  disabled-worlds: []
+
+  # Text shown in the tab list next to the health number.
+  # %health% is replaced by the vanilla health score.
+  format: "&c%health%\u2764"
+
+# Floating title (shown just under the player's real nametag) settings.
+title:
+  # Height in blocks above the player's feet where the title floats.
+  # Vanilla nametags render ~2.3-2.4 blocks up, so keep this a bit lower
+  # than that so it sits underneath, not on top of, the real nametag.
+  y-offset: 1.95
