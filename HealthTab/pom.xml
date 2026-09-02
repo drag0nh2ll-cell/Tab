@@ -14,21 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!--
-        BUILDING:
-        Push this project to a GitHub repo -- the included
-        .github/workflows/build.yml will compile it automatically and attach
-        the finished HealthTab.jar as a downloadable build artifact.
-        You can also build locally with `mvn clean package` if you have
-        Java 8+ and Maven installed.
-
-        - spigot-api comes from the official Spigot repo, matched to 1.8.8
-          since that's what FalixNodes 1.8 servers run.
-        - luckperms-api is resolved from Luck's own repository. The
-          LuckPerms-Bukkit jar in ./libs is kept as an offline fallback
-          (system-scope, commented out below) in case you ever build
-          somewhere without access to repo.lucko.me.
-    -->
+   
 
     <repositories>
         <repository>
